@@ -1,0 +1,21 @@
+name: ARC Runner Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Run on ARC Runner
+    runs-on: helm-gh-runner # Match the labels you defined in your Runner spec
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print runner info
+        run: |
+          echo "Running on self-hosted ARC runner!"
+          echo "Hostname: $(hostname)"
+          echo "Runner OS: $RUNNER_OS"
+          echo "Runner Name: $RUNNER_NAME"
