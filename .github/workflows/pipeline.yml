@@ -9,7 +9,7 @@ jobs:
     runs-on: helm-gh-runner 
     
     steps:
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Build
         run: docker build -t 192.168.49.1:5000/app-suma:v1 .
