@@ -5,7 +5,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build-and-push:
+  build:
     runs-on: helm-gh-runner 
     
     steps:
