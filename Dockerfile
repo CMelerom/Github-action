@@ -2,6 +2,6 @@ FROM 192.168.49.1:5000/node:alpine
 
 WORKDIR /app
 
-COPY suma.js .
+COPY index.js .
 
 CMD ["node", "suma.js"]
