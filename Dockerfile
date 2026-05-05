@@ -4,4 +4,4 @@ WORKDIR /app
 
 COPY index.js .
 
-CMD ["node", "suma.js"]
+CMD ["node", "index.js"]
