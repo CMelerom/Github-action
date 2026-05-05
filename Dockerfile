@@ -1,4 +1,4 @@
-FROM 192.168.49.1:5000/node:alpine
+FROM node:alpine
 
 WORKDIR /app
 
