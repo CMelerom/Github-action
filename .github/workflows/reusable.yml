@@ -36,6 +36,11 @@ jobs:
           docker build -t ${{ secrets.DOCKER_USER }}/${{ inputs.image }}:v2 .
           docker push ${{ secrets.DOCKER_USER }}/${{ inputs.image }}:v2
 
+      - name: Install kubectl
+        uses: azure/setup-kubectl@v3
+        with:
+          version: 'latest'
+
       - name: Set Kubernetes Context
         uses: azure/k8s-set-context@v3
         with:
