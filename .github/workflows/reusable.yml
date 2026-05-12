@@ -30,8 +30,8 @@ jobs:
 
       - name: Build and Push
         run: |
-          docker build -t ${{ secrets.DOCKER_USER }}/${{ inputs.image }}:v1 .
-          docker push ${{ secrets.DOCKER_USER }}/${{ inputs.image }}:v1
+          docker build -t ${{ secrets.DOCKER_USER }}/${{ inputs.image }}:v2 .
+          docker push ${{ secrets.DOCKER_USER }}/${{ inputs.image }}:v2
 
       - name: Set Kubernetes Context
         uses: azure/k8s-set-context@v3
