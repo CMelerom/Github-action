@@ -47,6 +47,12 @@ jobs:
           method: kubeconfig
           kubeconfig: ${{ secrets.KUBE_CONFIG }}
 
+      - name: SonarQube
+        uses: SonarSource/sonarqube-scan-action@v3 
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} 
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+
       - name: Deploy
         run: |
           kubectl apply -f deployment.yaml --insecure-skip-tls-verify
